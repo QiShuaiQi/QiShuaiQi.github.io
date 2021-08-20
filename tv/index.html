@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+
+  
+  <title>视频 | 个人博客</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="alternate" href="/atom.xml" title="个人博客" type="application/atom+xml">
+  <meta name="description" content="&#x2F;&#x2F;点播接口调用方法 	function startPlay(){ 		SewisePlayer.doPlay(); 	} 	function playPause(){ 		SewisePlayer.doPause(); 	} 	function seekTo(){ 		SewisePlayer.doSeek(5); 	} 	function playStop(){ 		Sew">
+<meta property="og:type" content="website">
+<meta property="og:title" content="视频">
+<meta property="og:url" content="http://example.com/tv/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="&#x2F;&#x2F;点播接口调用方法 	function startPlay(){ 		SewisePlayer.doPlay(); 	} 	function playPause(){ 		SewisePlayer.doPause(); 	} 	function seekTo(){ 		SewisePlayer.doSeek(5); 	} 	function playStop(){ 		Sew">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-15T03:48:05.000Z">
+<meta property="article:modified_time" content="2021-08-15T08:23:16.941Z">
+<meta property="article:author" content="祁帅旗">
+<meta name="twitter:card" content="summary">
+
+  <meta name="keywords" content="">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="theme-color" content="#9C27B0">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="个人博客">
+  <meta name="msapplication-starturl" content="http://example.com/tv/">
+  <meta name="msapplication-navbutton-color" content="#9C27B0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="个人博客">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+
+  
+    <link rel="canonical" href="http://example.com/tv/index.html">
+  
+
+  
+  
+
+  
+  
+  
+
+  
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/custom.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink">
+  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(!a){document.getElementsByTagName("body")[0].className+=" mdui-drawer-body-left"};</script>
+  <header id="header" class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-appbar-inset">
+  <div class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">个人博客</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: '搜索'}"><i class="mdui-icon material-icons">search</i></a>
+    <a href="/atom.xml" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'RSS'}"><i class="mdui-icon material-icons">rss_feed</i></a>
+  </div>
+</header>
+<div class="mdui-dialog" id="search">
+  
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="请输入关键字"><input type="hidden" name="sitesearch" value="http://example.com"></form>
+    <div class="search-result"></div>
+  
+</div>
+  <aside id="sidebar" class="mdui-drawer mdui-drawer-full-height">
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(a){document.getElementById("sidebar").className+=" mdui-drawer-close"};</script>
+  <div class="mdui-grid-tile">
+    <img src="/images/banner.png" style="height: 160px;">
+    <img src="/images/avatar.png" class="avatar-animation" style="position: absolute; top: 10%; left: 24px; width: 64px; height: 64px; border: 2px solid #fff; border-radius: 50%;">
+    <div class="mdui-grid-tile-actions">
+      <div class="mdui-grid-tile-text">
+        <div class="mdui-grid-tile-title">祁帅旗</div>
+        <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">art_track</i>有朋自远方来不亦说乎</div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    <a href="/" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
+      <div class="mdui-list-item-content">主页</div>
+    </a>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-0");if(a){document.getElementsByClassName("mdui-collapse-item")[0].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">archive</i>
+        <div class="mdui-list-item-content">归档</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2021/08/">八月 2021<span class="mdui-ripple sidebar_archives-count">36</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-1");if(a){document.getElementsByClassName("mdui-collapse-item")[1].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">class</i>
+        <div class="mdui-list-item-content">分类</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/%E8%AF%B7%E9%97%AE/">请问<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E9%98%BF%E4%B8%89/">阿三<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E9%98%BF%E8%90%A8%E5%A4%A7/">阿萨大<span class="mdui-ripple sidebar_archives-count">33</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-2");if(a){document.getElementsByClassName("mdui-collapse-item")[2].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
+        <div class="mdui-list-item-content">标签</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/%E6%88%91%E5%8E%BB%E9%A5%BF/" rel="tag">我去饿<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E6%92%92/" rel="tag">撒<span class="mdui-ripple sidebar_archives-count">30</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E8%AF%B7%E9%97%AE/" rel="tag">请问<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E9%98%BF%E8%90%A8%E5%A4%A7/" rel="tag">阿萨大<span class="mdui-ripple sidebar_archives-count">4</span></a>
+        
+      </div>
+    </div>
+    <a href="/about" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">person</i>
+      <div class="mdui-list-item-content">关于</div>
+    </a>
+  </div>
+
+  <div class="mdui-divider"></div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    
+      <a href="/timeline/" class="mdui-list-item mdui-ripple">时间轴</a>
+    
+      <a href="/tagcloud/" class="mdui-list-item mdui-ripple">标签云</a>
+    
+      <a href="/archives/2021/08/" class="mdui-list-item mdui-ripple">相册</a>
+    
+      <a href="/tv/" class="mdui-list-item mdui-ripple">视频</a>
+    
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-3");if(a){document.getElementsByClassName("mdui-collapse-item")[3].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-content">友情链接</div>
+        <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        
+          <a href="javascript:;" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme mdui-ripple" style="justify-content: center;">链接为空</a>
+        
+      </div>
+    </div>
+  </div>
+</aside>
+  <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-9.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">视频</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2021-08-15 / <i class="iconfont">&#xe601;</i> 祁帅旗</div>
+        </div>
+      </div>
+      <div class="mdui-card-menu">
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#qrcode', align: 'right'}"><i class="mdui-icon material-icons">devices</i></button>
+          <ul class="mdui-menu" id="qrcode">
+            
+              <li class="mdui-menu-item"><a class="mdui-text-center mdui-ripple">发送到手机</a></li>
+            
+            <li class="mdui-menu-item" disabled>
+              
+                <img src="http://qr.liantu.com/api.php?w=246&m=10&text=http://example.com/tv/index.html">
+              
+            </li>
+          </ul>
+        
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+          <ul class="mdui-menu" id="share_menu">
+            <li class="mdui-menu-item">
+              <a href="http://service.weibo.com/share/share.php?appkey=&title=视频&url=http://example.com/tv/index.html&pic=http://example.com/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://twitter.com/intent/tweet?text=视频&url=http://example.com/tv/index.html&via=祁帅旗" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/tv/index.html" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://plus.google.com/share?url=http://example.com/tv/index.html" target="_blank" class="mdui-ripple">分享到 Google+</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/tv/index.html&title=视频" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="http://connect.qq.com/widget/shareqq/index.html?site=个人博客&title=视频&pics=http://example.com/images/favicon.png&url=http://example.com/tv/index.html" target="_blank" class="mdui-ripple">分享到 QQ</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://telegram.me/share/url?url=http://example.com/tv/index.html&text=视频" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+            </li>
+          </ul>
+        
+      </div>
+    </header>
+    <div class="mdui-card-content mdui-typo">
+      
+<!-- <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe
+src="https://tv.cctv.com/live/cctv1?spm=C28340.P10QUzIsypHP.S28807.69&amp; page=1" scrolling="no" 
+border="0" frameborder="no"framespacing="0" allowfullscreen="true" style="position: absolute;width:100%; height: 100%; left: ; top: 0;"> </iframe></div> -->
+
+<!-- <iframe src="//player.bilibili.com/player.html?aid=42467871&bvid=BV1Cb411677C&cid=74518805&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> -->
+<div style="width: 640px; height: 360px; ">
+	<script type="text/javascript" src="../player/sewise.player.min.js?server=vod&type=mp4&videourl=http://www.w3schools.com/html/mov_bbb.mp4&sourceid=&autostart=true&starttime=0&lang=en_US&logo=http://onvod.sewise.com/libs/swfplayer/skin/images/logo.png&title=VodVideo 点播标题&buffer=5&skin=vodWhite&fallbackurls=%7B%0A%09%22ogg%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.ogg%22%2C%0A%09%22webm%22%3A%20%22http%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fmov_bbb.webm%22%0A%7D"></script>
+</div>
+<script>
+	//点播接口调用方法
+	function startPlay(){
+		SewisePlayer.doPlay();
+	}
+	function playPause(){
+		SewisePlayer.doPause();
+	}
+	function seekTo(){
+		SewisePlayer.doSeek(5);
+	}
+	function playStop(){
+		SewisePlayer.doStop();
+	}
+	function changeVolume(){
+		SewisePlayer.setVolume(0.1);
+	}
+	function getDuration(){
+		alert(SewisePlayer.duration());
+	}
+	function getPlayTime(){
+		alert(SewisePlayer.playTime());
+	}
+	// function switchProgram(){
+	// 	SewisePlayer.playProgram("xqfa3cZn", 0, true);
+	// }
+	function switchVideo(){
+		SewisePlayer.toPlay("http://media.w3.org/2010/05/sintel/trailer.mp4", "Sintel", 0, true);
+	}
+
+	//播放器回调方法
+	function playerReady(name){
+		console.log("Sewise Player On Ready 1");
+		//SewisePlayer.toPlay("http://www.w3school.com.cn/i/movie.mp4", "title", 0, false);
+	}
+	SewisePlayer.playerReady(function(name){
+		console.log("Sewise Player On Ready 2");
+	});
+	function onStart(name){
+        console.log("onStart 1");
+	}
+	SewisePlayer.onStart(function(name){
+		 console.log("onStart 2");
+	});
+	function onStop(name){
+		 console.log("onStop 1");
+	}
+	SewisePlayer.onStop(function(name){
+		 console.log("onStop 2");
+	});
+	function onMetadata(meta, name){
+		console.log("onMetadata 1");
+	}
+	SewisePlayer.onMetadata(function(meta, name){
+		 console.log("onMetadata 2");
+	});
+	function onClarity(clarity, name){
+		console.log("onClarity 1");
+	}
+	SewisePlayer.onClarity(function(clarity, name){
+		 console.log("onClarity 2");
+	});
+	function onPause(name){
+		console.log("onPause 1");
+	}
+	SewisePlayer.onPause(function(name){
+		 console.log("onPause 2");
+	});
+	function onSeek(time, name){
+		console.log("onSeek 1: " + time);
+	}
+	SewisePlayer.onSeek(function(time, name){
+		console.log("onSeek 2: " + time);
+	});
+	function onPlayTime(time, name){
+		console.log("onPlayTime 1: " + time);
+	}
+	SewisePlayer.onPlayTime(function(time, name){
+		console.log("onPlayTime 2: " + time);
+	});
+	function onBuffer(pt, name){
+		console.log("onBuffer 1: " + pt);
+	}
+	SewisePlayer.onBuffer(function(pt, name){
+		console.log("onBuffer 2: " + pt);
+	});
+</script>
+<div style="padding-top: 20px;">
+	<div style="padding-right: 20px;float: left;">[点播接口]</div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:startPlay();">播放</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:playPause();">暂停</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:seekTo();">跳转</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:playStop();">停止</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:changeVolume();">更改音量</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:getDuration();">获取总时长</a></div>
+	<div style="padding-right: 20px;float: left;"><a href="javascript:getPlayTime();">获取当前时间</a></div>
+	<!-- <div style="padding-right: 20px;float: left;"><a href="javascript:switchProgram();">切换节目</a></div> -->
+	<div style="padding-right: 20px;float: left;"><a href="javascript:switchVideo();">切换视频</a></div>
+	<br clear="all"/>
+</div>
+
+
+
+      
+      <blockquote>
+        
+        <strong>本文链接：</strong><br><a href="http://example.com/tv/index.html">http://example.com/tv/index.html</a>
+      </blockquote>
+    </div>
+    <footer class="mdui-card-actions">
+      
+      
+    </footer>
+    
+  </article>
+  
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+
+
+</main>
+  <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-0 mdui-text-center">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2021 - 2021 祁帅旗<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    
+  </div>
+</footer>
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_upward</i></button>
+  
+  
+<script src="/js/mdui.js"></script>
+<script src="/js/script.js"></script>
+
+  
+<script src="/custom.js"></script>
+
+</body>
+</html>
